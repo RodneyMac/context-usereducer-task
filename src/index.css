@@ -29,6 +29,12 @@ code {
 .text-heading {
   color: white;
   cursor: pointer;
+  transition: all 1s ease;
+}
+
+.text-heading:hover {
+  color: white;
+  text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px cyan;
 }
 
 .div-btn-add-h {
