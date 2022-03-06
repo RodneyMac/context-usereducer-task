@@ -5,9 +5,156 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.div-text-h {
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+.text-heading {
+  color: white;
+  cursor: pointer;
+}
+
+.div-btn-add-h {
+  margin-top: 20px;
+  margin-right: 40px;
+}
+
+.btn-add-h {
+  background-color: rgb(29, 201, 129);
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.btn-add-h:hover {
+  background-color: rgb(21, 110, 73);
+}
+
+.task-form {
+  margin: auto;
+  width: 280px;
+  height: 350px;
+  background-color: rgb(28, 73, 62);
+  margin-top: 80px;
+  border-radius: 20px;
+}
+
+.task-form-title {
+  color: white;
+  margin-left: 115px;
+}
+
+.div-input-title-form {
+  margin-left: 35px;
+  margin-top: 30px;
+}
+
+.input-title-form {
+  width: 190px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding-left: 15px;
+}
+
+.div-textarea-form {
+  margin-left: 35px;
+  margin-top: 15px;
+}
+
+.textarea-form {
+  width: 190px;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding-top: 20px;
+  padding-left: 15px;
+}
+
+.div-btn-form {
+  text-align: center;
+  margin-top: 40px;
+  margin-right: 2px;
+}
+
+.btn-form {
+  width: 200px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(29, 201, 129);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.btn-form:hover {
+  background-color: rgb(28, 148, 98);
+}
+
+.tasklist-container {
+  display: flex;
+}
+
+.task-list {
+  width: 600px;
+  height: 150px;
+  background-color: rgb(28, 73, 62);
+  margin: auto;
+  border-radius: 8px;
+}
+
+.div-btn-tasklist {
+  display: flex;
+  justify-content: end;
+  margin: 10px;
+  margin-top: 55px;
+  margin-right: 20px;
+}
+
+.btn-edit {
+  background-color: gray;
+  text-decoration: none;
+  margin-right: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  color: white;
+}
+
+.btn-delete {
+  background-color: brown;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 40px;
 }
