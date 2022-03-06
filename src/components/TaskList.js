@@ -11,11 +11,12 @@ const {tasks, deleteTask} = useContext(GlobalContext);
     <div className='tasklist-container'>
         <div className='task-list'>
             {tasks.map(task => (
-                <div className='' key={task.id}>
-                    <div>
-                        <h1>{task.title}</h1>
+                <div className='task-list-map' key={task.id}>
+                    <div className='list-map-content'>
+                        <h2>{task.title}</h2>
                         <h6>{task.id}</h6>
                         <p>{task.description}</p>
+                        <div className='div-btn-done'><button className='btn-done'>Done</button></div>
                     </div>
                     <div className='div-btn-tasklist'>
                         <Link to={`/edit/${task.id}`} className='btn-edit'>Edit</Link>

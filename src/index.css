@@ -28,6 +28,7 @@ code {
 .div-text-h {
   margin-left: 40px;
   margin-top: 10px;
+  text-decoration: none;
 }
 
 .text-heading {
@@ -133,28 +134,82 @@ code {
   border-radius: 8px;
 }
 
-.div-btn-tasklist {
+.task-list-map {
   display: flex;
-  justify-content: end;
-  margin: 10px;
-  margin-top: 55px;
-  margin-right: 20px;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
 }
 
-.btn-edit {
-  background-color: gray;
-  text-decoration: none;
-  margin-right: 8px;
-  padding: 8px;
-  border-radius: 6px;
+.list-map-content {
   color: white;
 }
 
+.list-map-content h2 {
+  margin: 10px;
+}
+
+.list-map-content h6 {
+  margin: 10px;
+}
+
+.list-map-content p {
+  margin: 10px;
+}
+
+/* .div-btn-tasklist { */
+  /* display: flex; */
+  /* justify-content: end; */
+  /* margin: 10px; */
+  /* margin-top: 55px; */
+  /* margin-right: 20px; */
+/* } */
+
+.btn-edit {
+  background-color: rgb(110, 110, 110);
+  text-decoration: none;
+  margin-right: 8px;
+  padding: 9px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  border-radius: 6px;
+  color: white;
+  transition: all 1s ease;
+}
+
+.btn-edit:hover {
+  background-color: rgb(56, 56, 56);
+}
+
 .btn-delete {
-  background-color: brown;
+  background-color: rgb(136, 6, 6);
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  height: 40px;
+  height: 35px;
+  transition: all 1s ease;
+}
+
+.btn-delete:hover {
+  background-color: rgb(78, 4, 4);
+}
+
+/* .div-btn-done {
+  bottom: 20px;
+} */
+
+.btn-done {
+  background-color: rgb(36, 33, 189);
+  color: white;
+  border-radius: 6px;
+  width: 60px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.btn-done:hover {
+  background-color: rgb(6, 3, 148);
 }

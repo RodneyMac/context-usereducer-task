@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 import { createContext } from "react";
 import {v4} from "uuid";
-
+import appReducer from "./AppReducer";
 
 const initialState = {
     tasks: [
@@ -17,7 +17,7 @@ const initialState = {
 export const GlobalContext = createContext(initialState);
 
 export const ContextProvider = ({children}) => {
-    const [state, dispatch] = useReducer(initialState);
+    const [state, dispatch] = useReducer(appReducer, initialState);
 
     const addTask = (task) => {
         dispatch({type: "ADD_TASK", payload: {...task, id: v4(), done: false}});
@@ -26,9 +26,13 @@ export const ContextProvider = ({children}) => {
     const deleteTask = (id) => {
         dispatch({type: "DELETE_TASK", payload: id});
     }
+
+    const updateTask = (task) => dispatch({type: "UPDATE_TASK", payload: task});
+
+    const toggleTaskDone = (id) => dispatch({type: "TOGGLE_TASK_DONE", payload: id});
     
     return(
-        <GlobalContext.Provider value={{...state, addTask, deleteTask}}>
+        <GlobalContext.Provider value={{...state, addTask, deleteTask, updateTask, toggleTaskDone}}>
             {children}
         </GlobalContext.Provider>
     )
