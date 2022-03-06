@@ -4,8 +4,7 @@ import { GlobalContext } from '../context/GlobalContext';
 import {Link} from "react-router-dom";
 
 const TaskList = () => {
-
-const {tasks, deleteTask} = useContext(GlobalContext);
+const {tasks, deleteTask, toggleTaskDone} = useContext(GlobalContext);
 
   return(
     <div className='tasklist-container'>
@@ -13,14 +12,14 @@ const {tasks, deleteTask} = useContext(GlobalContext);
             {tasks.map(task => (
                 <div className='task-list-map' key={task.id}>
                     <div className='list-map-content'>
-                        <h2>{task.title}</h2>
+                        <h4>{task.title}</h4>
                         <h6>{task.id}</h6>
                         <p>{task.description}</p>
-                        <div className='div-btn-done'><button className='btn-done'>Done</button></div>
+                        <button className='btn-done' onClick={() => toggleTaskDone(task.id)}>{task.done ? "Undone" : "Done"}</button>
                     </div>
-                    <div className='div-btn-tasklist'>
+                    <div>
                         <Link to={`/edit/${task.id}`} className='btn-edit'>Edit</Link>
-                        <button className='btn-delete'>Delete</button>
+                        <button className='btn-delete' onClick={() => deleteTask(task.id)}>Delete</button>
                     </div>
                 </div>
             ))}

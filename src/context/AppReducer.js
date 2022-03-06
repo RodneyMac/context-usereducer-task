@@ -22,7 +22,7 @@ export default function appReducer(state, action) {
             }
         case "TOGGLE_TASK_DONE":
             return {
-                tasks: state.task.map(task => task.id === action.payload ? {...task, done: !task.done} : task)
+                tasks: state.tasks.map(task => task.id === action.payload ? {...task, done: !task.done} : task)
             }
 
         default:

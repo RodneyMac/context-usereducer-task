@@ -13,15 +13,10 @@ code {
     monospace;
 }
 
-.app {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .heading {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 10px;
 }
 
@@ -68,7 +63,9 @@ code {
 
 .task-form-title {
   color: white;
-  margin-left: 115px;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
 }
 
 .div-input-title-form {
@@ -127,11 +124,9 @@ code {
 }
 
 .task-list {
-  width: 600px;
-  height: 150px;
-  background-color: rgb(28, 73, 62);
+  display: flex;
+  flex-direction: column;
   margin: auto;
-  border-radius: 8px;
 }
 
 .task-list-map {
@@ -139,36 +134,35 @@ code {
   justify-content: space-around;
   text-align: center;
   align-items: center;
+  width: 350px;
+  height: 150px;
+  background-color: rgb(28, 73, 62);
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
 .list-map-content {
   color: white;
+  margin-bottom: 20px;
+  width: 50%;
 }
 
-.list-map-content h2 {
-  margin: 10px;
+.list-map-content h4 {
+  margin-bottom: 5px;
 }
 
 .list-map-content h6 {
-  margin: 10px;
+  margin: 5px;
 }
 
 .list-map-content p {
-  margin: 10px;
+  margin: 5px;
 }
-
-/* .div-btn-tasklist { */
-  /* display: flex; */
-  /* justify-content: end; */
-  /* margin: 10px; */
-  /* margin-top: 55px; */
-  /* margin-right: 20px; */
-/* } */
 
 .btn-edit {
   background-color: rgb(110, 110, 110);
   text-decoration: none;
-  margin-right: 8px;
+  margin-right: 10px;
   padding: 9px;
   padding-top: 5px;
   padding-bottom: 8px;
@@ -194,10 +188,6 @@ code {
 .btn-delete:hover {
   background-color: rgb(78, 4, 4);
 }
-
-/* .div-btn-done {
-  bottom: 20px;
-} */
 
 .btn-done {
   background-color: rgb(36, 33, 189);
